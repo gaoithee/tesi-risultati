@@ -1,7 +1,11 @@
-**lista dei files e breve descrizione:**
-- `phi-mini-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `microsoft/Phi-3-mini-4k-instruct` (3.8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
-- `phi-medium-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `microsoft/Phi-3-medium-4k-instruct` (14B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
+**lista dei `results` e breve descrizione:**
+- `baseline-phimini-hotpotqa.csv`: risultati del processo tesi-antitesi-sintesi usando `microsoft/Phi-3-mini-4k-instruct` (3.8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
+- `baseline-phimedium-hotpotqa.csv`: risultati del processo tesi-antitesi-sintesi usando `microsoft/Phi-3-medium-4k-instruct` (14B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
 
+**lista dei `py-files` e breve descrizione:**
+- `baseline-phimini-hotpotqa.py`: file python che produce `baseline-phimini-hotpotqa.csv`;
+- `bart-phimini-hotpotqa.py`: file python che auspicabilmente _produrrà_ `phi-mini-bart.csv`;
+- `roberta-phimini-hotpotqa.py`: file python che auspicabilmente _produrrà_ `phi-mini-roberta.csv`;
 
 **Note su `saracandu/hotpotQA_nli`:**
 - `question`, `answer`, `passages`, `type`, `level` sono presi dal dataset originale;
