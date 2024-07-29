@@ -10,3 +10,8 @@
 - le coppie (`BART1`, `BART2`) e (`ROBERTA1`, `ROBERTA2`) sono ricavate rispettivamente dai modelli `facebook/bart-large-mnli` e `FacebookAI/roberta-large-mnli` come mostrato qui: https://github.com/gaoithee/tesi-bozze/blob/main/NLI-dataset.ipynb (è bruttissimo ma funzionale allo scopo).
 
 
+**ATTUALMENTE IN RUN:**
+1. `phi-mini-bart.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `BARTi` più alto;
+2. `phi-mini-roberta.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `ROBERTAi` più alto;
+3. `wikihop` dataset con le fonti sintetizzate da `facebook/bart-large-cnn` (minimo numero di token: 10, massimo: 400) -> *valutare se estenderlo e se sì, di quanto!*
+4. `llama3-instruct-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset (devo tagliare esempi perché ovviamente l'inference time è più alto, per ora `N_examples = 200`);
