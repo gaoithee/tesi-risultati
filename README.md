@@ -4,7 +4,8 @@
 - `bart-phimini-hotpotqa.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `BARTi` più alto;
 - `roberta-phimini-hotpotqa.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `ROBERTAi` più alto;
 - `bart-phimedium-hotpotqa.csv`: tesi-antitesi-sintesi con come ...;
-- `roberta-phimedium-hotpotqa.csv`.
+- `roberta-phimedium-hotpotqa.csv`;
+- `llama3-instruct-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
  
 **lista dei `py-files` e breve descrizione:**
 - `baseline-phimini-hotpotqa.py`: file python che produce `baseline-phimini-hotpotqa.csv`;
@@ -17,7 +18,13 @@
 - `first_nli` e `second_nli` sono statements creati da `microsoft/Phi-3-mini-4k-instruct` a partire da `question` e `options` con qualche esempio few-shot (tecnica suggerita dal paper https://arxiv.org/pdf/2104.08731 come alternative alla loro versione "rule-based)
 - le coppie (`BART1`, `BART2`) e (`ROBERTA1`, `ROBERTA2`) sono ricavate rispettivamente dai modelli `facebook/bart-large-mnli` e `FacebookAI/roberta-large-mnli` come mostrato qui: https://github.com/gaoithee/tesi-bozze/blob/main/NLI-dataset.ipynb (è bruttissimo ma funzionale allo scopo).
 
-
 **ATTUALMENTE IN RUN:**
 1. `wikihop` dataset con le fonti sintetizzate da `facebook/bart-large-cnn`-> *nota importante: siccome ha un max di 4k in input, se il documento da sintetizzare è più grande viene brutalmente spezzato ogni 4k, sintetizzato indipendentemente ed infine questi riassunti vengono concatenati.* (poco raffinata ma...) 
-2. `llama3-instruct-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset (devo tagliare esempi perché ovviamente l'inference time è più alto, per ora `N_examples = 200`);
+2. `gemma-2-2b-it-base.csv`;
+3. `gemma-2-9b-it-baseline.csv`;
+4. `gemma-2-27b-it-baseline.csv`.
+
+**TO-DO:**
+- sistema wikihop;
+- togli il contesto e vedi cosa cambia;
+- controlla `phi-small` (anche se ha un tokenizer diverso).
