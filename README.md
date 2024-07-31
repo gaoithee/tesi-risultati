@@ -1,7 +1,9 @@
 **lista dei `results` e breve descrizione:**
 - `baseline-phimini-hotpotqa.csv`: risultati del processo tesi-antitesi-sintesi usando `microsoft/Phi-3-mini-4k-instruct` (3.8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
 - `baseline-phimedium-hotpotqa.csv`: risultati del processo tesi-antitesi-sintesi usando `microsoft/Phi-3-medium-4k-instruct` (14B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
-
+- `bart-phimini-hotpotqa.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `BARTi` più alto;
+- `roberta-phimini-hotpotqa.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `ROBERTAi` più alto;
+ 
 **lista dei `py-files` e breve descrizione:**
 - `baseline-phimini-hotpotqa.py`: file python che produce `baseline-phimini-hotpotqa.csv`;
 - `bart-phimini-hotpotqa.py`: file python che auspicabilmente _produrrà_ `phi-mini-bart.csv`;
@@ -15,7 +17,7 @@
 
 
 **ATTUALMENTE IN RUN:**
-1. `phi-mini-bart.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `BARTi` più alto;
-2. `phi-mini-roberta.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `ROBERTAi` più alto;
-3. `wikihop` dataset con le fonti sintetizzate da `facebook/bart-large-cnn` (minimo numero di token: 10, massimo: 400) -> *valutare se estenderlo e se sì, di quanto!*
-4. `llama3-instruct-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset (devo tagliare esempi perché ovviamente l'inference time è più alto, per ora `N_examples = 200`);
+1. `wikihop` dataset con le fonti sintetizzate da `facebook/bart-large-cnn`-> *nota importante: siccome ha un max di 4k in input, se il documento da sintetizzare è più grande viene brutalmente spezzato ogni 4k, sintetizzato indipendentemente ed infine questi riassunti vengono concatenati.* (poco raffinata ma...) 
+2. `llama3-instruct-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset (devo tagliare esempi perché ovviamente l'inference time è più alto, per ora `N_examples = 200`);
+3. `bart-phimedium-hotpotqa.csv`
+4. `roberta-phimedium-hotpotqa.csv`
