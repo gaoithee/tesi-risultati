@@ -4,10 +4,10 @@
 - `bart-phimini-hotpotqa.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `BARTi` più alto;
 - `roberta-phimini-hotpotqa.csv`: tesi-antitesi-sintesi con come antitesi l'opzione tra `first_nli` e `second_nli` che ha lo score `ROBERTAi` più alto;
 - `bart-phimedium-hotpotqa.csv`: tesi-antitesi-sintesi con come ...;
-- `roberta-phimedium-hotpotqa.csv`;
-- `llama3-instruct-baseline.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
-- `gemma-2-2b-it-baseline.csv`: tested on hotpotqa;
-- `gemma-2-9b-it-baseline.csv`: tested on hotpotqa.
+- `roberta-phimedium-hotpotqa.csv`tesi-antitesi-sintesi con come ...;
+- `baseline-llama3-instruct-hotpotqa.csv`: risultati del processo tesi-antitesi-sintesi usando `meta-llama/Meta-Llama-3.1-8B-Instruct` (8B) su questa versione `saracandu/hotpotQA_nli` del hotpotQA dataset;
+- `baseline-gemma-2-2b-it-hotpotqa.csv`: tested on hotpotqa;
+- `baseline-gemma-2-9b-it-hotpotqa.csv`: tested on hotpotqa.
  
 **lista dei `py-files` e breve descrizione:**
 - `baseline-phimini-hotpotqa.py`: file python che produce `baseline-phimini-hotpotqa.csv`;
@@ -22,8 +22,7 @@
 
 **ATTUALMENTE IN RUN:**
 1. `wikihop` dataset con le fonti sintetizzate da `facebook/bart-large-cnn`-> *nota importante: siccome ha un max di 4k in input, se il documento da sintetizzare è più grande viene brutalmente spezzato ogni 4k, sintetizzato indipendentemente ed infine questi riassunti vengono concatenati.* (poco raffinata ma...) 
-2. `gemma-2-27b-it-baseline.csv`;
-3. `phi-mini-nocontext.csv`
+2. `phi-mini-nocontext.csv`
 
 **TO-DO:**
 - sistema wikihop;
