@@ -1,7 +1,7 @@
 **`results` and short description:**
 
 on `hotpotqa` dataset:
-|which model considered |baseline˙ + oracle⋆|bart⁺|robertaˆ|
+|which model considered |baseline♦︎ + oracle✦|bart✸|roberta✱|
 |:------:|:---:|:---:|:---:|
 | phi-mini | `baseline-phimini-hotpotqa.csv`| `bart-phimini-hotpotqa.csv` | `roberta-phimini-hotpotqa.csv` |
 | phi-medium | `baseline-phimedium-hotpotqa.csv` | `bart-phimedium-hotpotqa.csv` | `roberta-phimedium-hotpotqa.csv` |
@@ -9,10 +9,10 @@ on `hotpotqa` dataset:
 | gemma-2-2b-it | `baseline-gemma-2-2b-it-hotpotqa.csv` | / | / |
 | gemma-2-9b-it | `baseline-gemma-2-2b-it-hotpotqa.csv` | / | / | 
 
-baseline (˙) means that the LLM produces the antithesis given the thesis answer and the context;
-oracle (⋆) means that the antithesis is the correct suggestion;
-bart (⁺) means that the antithesis is the NLI statement with the highest entailment probability according to `facebook/bart-large`;
-roberta (ˆ) means same as above but with `FacebookAI/roberta-large`.
+baseline (♦︎) means that the LLM produces the antithesis given the thesis answer and the context;
+oracle (✦) means that the antithesis is the correct suggestion;
+bart (✸) means that the antithesis is the NLI statement with the highest entailment probability according to `facebook/bart-large`;
+roberta (✱) means same as above but with `FacebookAI/roberta-large`.
  
 **`py-files`**
 
