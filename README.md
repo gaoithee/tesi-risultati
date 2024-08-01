@@ -1,7 +1,7 @@
 **`results` and short description:**
 
 on `hotpotqa` dataset:
-|which model|baseline* + oracle**|bart***|roberta****|
+|which model considered |baseline* + oracle**|bart***|roberta****|
 |:------:|:---:|:---:|:---:|
 | phi-mini | `baseline-phimini-hotpotqa.csv`| `bart-phimini-hotpotqa.csv` | `roberta-phimini-hotpotqa.csv` |
 | phi-medium | `baseline-phimedium-hotpotqa.csv` | `bart-phimedium-hotpotqa.csv` | `roberta-phimedium-hotpotqa.csv` |
