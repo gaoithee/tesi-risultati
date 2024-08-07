@@ -4,9 +4,9 @@ on `hotpotqa` dataset:
 |which model considered |baseline♦︎ + oracle✦|bart✸|roberta✱| no context | cot |
 |:------:|:---:|:---:|:---:|:---:|:---:|
 | phi-mini | `baseline-phimini-hotpotqa.csv`| `bart-phimini-hotpotqa.csv` | `roberta-phimini-hotpotqa.csv` | `nocontext-phimini-hotpotqa.csv` | `cot-phimini-hotpotqa.csv` |
-| phi-medium | `baseline-phimedium-hotpotqa.csv` | `bart-phimedium-hotpotqa.csv` | `roberta-phimedium-hotpotqa.csv` | `nocontext-phimedium-hotpotqa.csv` | / |
-| llama-3.1-it-8b | `baseline-llama-3.1-instruct-hotpotqa.csv` | / | / | / | / |
-| gemma-2-2b-it | `baseline-gemma-2-2b-it-hotpotqa.csv` | / | / | / | / |
+| phi-medium | `baseline-phimedium-hotpotqa.csv` | `bart-phimedium-hotpotqa.csv` | `roberta-phimedium-hotpotqa.csv` | `nocontext-phimedium-hotpotqa.csv` | `cot-phimedium-hotpotqa.csv` |
+| llama-3.1-it-8b | `baseline-llama-3.1-instruct-hotpotqa.csv` | / | / | / | `cot-llama-3.1-8b-instruct-hotpotqa.csv` |
+| gemma-2-2b-it | `baseline-gemma-2-2b-it-hotpotqa.csv` | / | / | / | `cot-gemma-2-2b-it-hotpotqa.csv` |
 | gemma-2-9b-it | `baseline-gemma-2-2b-it-hotpotqa.csv` | / | / | / | / |
 
 baseline (♦︎) means that the LLM produces the antithesis given the thesis answer and the context;
